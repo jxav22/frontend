@@ -1,0 +1,9 @@
+.socialButtons {
+    font-weight: bold;
+    display: flex;
+    justify-content: right;
+    font-size: max(2vh, 1.5vw);
+    gap: 2em;
+    margin-right: 10vw;
+    margin-top: 10vh;
+}
