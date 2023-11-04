@@ -6,10 +6,12 @@ function LandingPage() {
   return (
     <div className={styles.container}>
       <div className={styles.leftPane} />
-      <h1 className={styles.leftTitle}>Vent</h1>
       <SocialButtons/>
-      <h1 className={styles.rightTitle}>Something.</h1>
-      <p className={styles.subTitle}>We all need an ear sometimes.</p>
+      <span className={styles.displacedArea}>
+        <h1 className={styles.leftTitle}>Vent</h1>
+        <h1 className={styles.rightTitle}>Something.</h1>
+        <p className={styles.subTitle}>We all need an ear sometimes.</p>
+      </span>
     </div>
   );
 }

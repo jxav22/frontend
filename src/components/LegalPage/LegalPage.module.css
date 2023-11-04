@@ -1,0 +1,43 @@
+.container {
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+}
+
+.leftPane {
+    grid-area: 1 / 1 / 2 / 1;
+    background-color: #C2CCEF;
+}
+
+.container > span {
+    margin: 5vw
+}
+
+.container > span > p {
+    font-size: 2vw;
+}
+
+.container > span > p:first-of-type{
+    font-weight: bold;
+}
+
+@media (max-width: 800px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .profilePicture {
+        margin: unset;
+        margin-bottom: -5vh;
+        width: 30vw;
+        align-self: center;
+    }
+
+    .container > span > p {
+        font-size: 3.5vw;
+    }
+}
