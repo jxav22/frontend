@@ -13,15 +13,40 @@
 }
 
 .container > span {
-    margin: 5vw
+    margin: 4vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    line-height: 6vh;
+    font-size: 1.8vw;
 }
 
-.container > span > p {
-    font-size: 2vw;
+.container > span > h2 {
+    margin: unset;
+    font-weight: bolder;
+    font-size: inherit;
+    text-align: center;
+    padding-bottom: 2vh;
+    width: 80%;
+    align-self: center;
 }
 
-.container > span > p:first-of-type{
-    font-weight: bold;
+.container > span > ul{
+    padding-bottom: 2vh;
+}
+
+.nextPageButton {
+    animation: fadeIn 1s linear 5s both;
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 800px){
@@ -38,7 +63,8 @@
         align-self: center;
     }
 
-    .container > span > p {
+    .container > span {
+        line-height: 5vh;
         font-size: 3.5vw;
     }
 }

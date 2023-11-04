@@ -1,0 +1,20 @@
+.nextButton {
+    all: unset;
+
+    width: calc(100%);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.2vw;
+    opacity: 10%;
+}
+
+.nextButton:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+
+@media (max-width: 800px){
+    .nextButton {
+        font-size: 3.5vw;
+    }
+}

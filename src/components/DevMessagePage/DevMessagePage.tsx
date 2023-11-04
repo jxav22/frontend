@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './DevMessagePage.module.css'
 import Image from 'next/image'
+import NextPageButton from '../NextPageButton/NextPageButton'
 
-export default function DevMessagePage() {
+export default function DevMessagePage({ onNextPage }: { onNextPage: () => void}) {
   return (
     <div className={styles.container}>
         <div className={styles.leftPane} />
@@ -14,7 +15,7 @@ export default function DevMessagePage() {
             <p>Vent Something will be free forever, but your donations really do help</p>
             <p>Cheers,</p>
             <p>Dev</p>
-            <button>Nice</button>
+            <NextPageButton onClick={onNextPage}>{"[continue]"}</NextPageButton>
         </span>
     </div>
   )

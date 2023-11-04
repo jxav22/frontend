@@ -5,6 +5,7 @@ import styles from '@/styles/Main.module.css'
 import LandingPage from '@/components/LandingPage/LandingPage'
 import DevMessagePage from '@/components/DevMessagePage/DevMessagePage'
 import LegalPage from '@/components/LegalPage/LegalPage'
+import ScrollRouter from '@/components/ScrollRouter/ScrollRouter'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,9 +19,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
+        <ScrollRouter/>
         {/* <LandingPage/> */}
         {/* <DevMessagePage/> */}
-        <LegalPage/>
+        {/* <LegalPage/> */}
         {/* <div className={styles.description}>
           <p>
             Get started by editing&nbsp;

@@ -1,6 +1,6 @@
 .container {
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     
     display: grid;
 
@@ -66,18 +66,13 @@
     animation: slideUpFadeIn 1.5s ease 1s both;
 }
 
-.displacedArea:hover{
-    cursor: pointer;
-    animation: slideUp 0.1s ease both;
+.displacedArea {
+    transition: transform 0.1s ease;
 }
 
-@keyframes slideUp {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-5vh);
-    }
+.displacedArea:hover{
+    cursor: pointer;
+    transform: translateY(-5vh);
 }
 
 @media (max-width: 800px){

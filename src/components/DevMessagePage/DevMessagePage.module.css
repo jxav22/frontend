@@ -1,6 +1,6 @@
 .container {
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -15,18 +15,47 @@
 .profilePicture {
     grid-area: 1 / 1 / 2 / 1;
     justify-self: center;
-    margin-top: 2vh;
+    padding-top: 2vh;
 
     width: 80%;
     height: auto;
+
+    animation: fadeIn 0.5s linear 0.5s both;
+    transition: transform 0.8s ease-in-out;
+}
+
+.profilePicture:hover{
+    transform: rotate(-360deg);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
 }
 
 .container > span {
     margin: 5vw;
+    animation: fadeInFromRight 0.5s linear 0.5s both;
 }
 
 .container > span > p {
     font-size: 2.2vw;
+}
+
+@keyframes fadeInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(1vw);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @media (max-width: 800px){
