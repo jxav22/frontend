@@ -1,34 +1,26 @@
 .container {
-    display: flex;
     height: 100%;
+    
+    display: grid;
 
-    --title-size: 9vw;
-    --subtitle-size: 1.7vw;
-    --subtitle-gap: 5vh;
-    --subtitle-margin-bottom: 10vh;	
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr min-content min-content;
 
-    --left-title-margin-bottom: calc(var(--subtitle-gap) + var(--subtitle-size) + var(--subtitle-margin-bottom));
+    --title-size: 8vw;
+    --subtitle-size: 1.5vw;
 }
 
 .leftPane {
+    grid-area: 1 / 1 / 4 / 2;
     background-color: #C2CCEF;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.rightPane {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .leftTitle {
+    grid-area: 2 / 1 / 3 / 1;
     font-size: var(--title-size);
 
     margin: unset;
-    margin: 0 3vw var(--left-title-margin-bottom) 5vw;
+    margin: 0 3vw 0 5vw;
     animation: slideDownFadeIn 1.5s ease both;
 }
 
@@ -39,7 +31,7 @@
     }
     100% {
         opacity: 1;
-        transform: translateY(0vh);
+        transform: translateY(2vh);
     }
 }
 
@@ -49,8 +41,7 @@
 
     color: #C2CCEF;
     margin: unset;
-    margin-left: 3vw;
-
+    margin-left: 2vw;
     animation: slideUpFadeIn 1.5s ease 0.3s both;
 }
 
@@ -70,24 +61,41 @@
 
     font-weight: bold;
     font-size: var(--subtitle-size);
-
+    
     margin: unset;
-    margin-top: var(--subtitle-gap);
-    margin-bottom: var(--subtitle-margin-bottom);
-
+    margin: 5vh 0 5vh 0;
     animation: slideUpFadeIn 1.5s ease 1s both;
 }
 
-.socialButtons {
-    flex: 1;
+@media (max-width: 800px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
 
-    display: flex;
-    justify-content: right;
-    gap: 2em;
+    .leftTitle {
+        order: 2;
+        animation: unset;
+        margin: unset;
 
-    font-weight: bold;
-    font-size: 2vh;
+        margin-left: 10vw;
 
-    margin-top: 10vh;
-    margin-right: 5vw;
+        font-size: 10vw;
+    }
+
+    .rightTitle {
+        order: 3;
+        animation: unset;
+        margin: unset;
+
+        margin-left: 10vw;
+
+        font-size: 10vw;
+    }
+
+    .subTitle {
+        order: 4;
+        font-size: 3vw;
+    }
 }
