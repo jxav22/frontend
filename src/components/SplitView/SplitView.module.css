@@ -3,66 +3,61 @@
     height: 100%;
 
     --title-size: 9vw;
+    --subtitle-size: 1.7vw;
+    --subtitle-gap: 5vh;
+    --subtitle-margin-bottom: 10vh;	
 
-    --socials-size: max(2vh, 1.3vw);
-    --socials-margin-top: 5vh; 
-
-    --left-title-padding-top: 55vh;
-    --right-title-padding-top: calc(var(--left-title-padding-top) - var(--socials-margin-top) - var(--socials-size));
+    --left-title-margin-bottom: calc(var(--subtitle-gap) + var(--subtitle-size) + var(--subtitle-margin-bottom));
 }
 
 .leftPane {
     background-color: #C2CCEF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .rightPane {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .leftTitle {
     font-size: var(--title-size);
 
     margin: unset;
-    padding: var(--left-title-padding-top) 2vw 0 5vw;
-
+    margin: 0 3vw var(--left-title-margin-bottom) 5vw;
     animation: slideDownFadeIn 1.5s ease both;
 }
 
 @keyframes slideDownFadeIn {
     0% {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(-3vh);
     }
     100% {
         opacity: 1;
-        transform: translateY(20px);
+        transform: translateY(0vh);
     }
 }
 
 
 .rightTitle {
     font-size: var(--title-size);
-    color: #C2CCEF;
 
+    color: #C2CCEF;
     margin: unset;
-    padding: var(--right-title-padding-top) 0 0 3vw;
+    margin-left: 3vw;
 
     animation: slideUpFadeIn 1.5s ease 0.3s both;
-}
-
-@keyframes fadeTextDecoration {
-    0% {
-        text-decoration: none;
-    }
-    100% {
-        text-decoration: underline wavy;
-    }
 }
 
 @keyframes slideUpFadeIn {
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(3vh);
     }
     100% {
         opacity: 1;
@@ -74,21 +69,25 @@
     text-align: center;
 
     font-weight: bold;
-    font-size: 1.7vw;
+    font-size: var(--subtitle-size);
 
-    padding-top: 10vh;
+    margin: unset;
+    margin-top: var(--subtitle-gap);
+    margin-bottom: var(--subtitle-margin-bottom);
 
     animation: slideUpFadeIn 1.5s ease 1s both;
 }
 
 .socialButtons {
+    flex: 1;
+
     display: flex;
     justify-content: right;
     gap: 2em;
 
     font-weight: bold;
-    font-size: var(--socials-size);
+    font-size: 2vh;
 
-    margin-top: var(--socials-margin-top);
+    margin-top: 10vh;
     margin-right: 5vw;
 }
