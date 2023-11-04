@@ -10,6 +10,12 @@
     margin-right: 5vw;
 }
 
+.socialButtons > span:hover {
+    cursor: pointer;
+    transform: translateY(0.1vh);
+    transition: transform 0.1s linear;
+}
+
 @media (max-width: 800px){
     .socialButtons {
         order: 1;
