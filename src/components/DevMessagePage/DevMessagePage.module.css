@@ -1,0 +1,48 @@
+.container {
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+}
+
+.leftPane {
+    grid-area: 1 / 1 / 2 / 1;
+    background-color: #C2CCEF;
+}
+
+.profilePicture {
+    grid-area: 1 / 1 / 2 / 1;
+    justify-self: center;
+    margin-top: 2vh;
+
+    width: 80%;
+    height: auto;
+}
+
+.container > span {
+    margin: 5vw;
+}
+
+.container > span > p {
+    font-size: 2.2vw;
+}
+
+@media (max-width: 800px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .profilePicture {
+        margin: unset;
+        margin-bottom: -5vh;
+        width: 30vw;
+        align-self: center;
+    }
+
+    .container > span > p {
+        font-size: 3.5vw;
+    }
+}

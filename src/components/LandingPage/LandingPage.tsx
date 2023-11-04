@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./SplitView.module.css";
+import styles from "./LandingPage.module.css";
 import SocialButtons from "../SocialButtons/SocialButtons";
 
-function SplitView() {
+function LandingPage() {
   return (
     <div className={styles.container}>
       <div className={styles.leftPane} />
@@ -14,4 +14,4 @@ function SplitView() {
   );
 }
 
-export default SplitView;
+export default LandingPage;
