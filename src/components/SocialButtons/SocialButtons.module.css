@@ -15,7 +15,11 @@
         order: 1;
         flex: 1;
 
+        gap: 4em;
+
+        margin: unset;
+        margin-top: 10vh;
         justify-content: center;
-        font-size: 2.5vw;
+        font-size: 2.7vw;
     }
 }
