@@ -12,7 +12,6 @@ function ConnectionPage({
   onSelectVenter: () => void;
   currentState: string;
 }) {
-  
   let stateStyling: string;
   switch (currentState) {
     case "venter":
@@ -32,15 +31,23 @@ function ConnectionPage({
         <div className={styles.ventSection} onClick={onSelectVenter}>
           <h1 className={styles.ventHeader}>VENT</h1>
           <h2 className={styles.ventSubheader}>talk or release</h2>
-
-          {/* {currentState === 1 ? <div className={styles.venterDescription}>Vent your woes</div> : <></>} */}
+          <blockquote className={styles.ventDescription}>
+            Feeling overwhelmed, anxious, or burdened by the complexities of
+            life? Venting provides an outlet for you to express your thoughts,
+            emotions, and struggles openly and honestly. This space is
+            here for you to unload your feelings without fear of judgment.
+          </blockquote>
         </div>
 
         <div className={styles.listenSection} onClick={onSelectListener}>
           <h1 className={styles.listenHeader}>LISTEN</h1>
           <h2 className={styles.listenSubheader}>help someone out</h2>
-
-          {/* {currentState === 2 ? <div className={styles.listenerDescription}>Be kind and supportive and stuff</div> : <></>} */}
+          <blockquote className={styles.listenDescription}>
+            As a Listener, you play
+            a crucial role by offering your time
+            and understanding to those who need someone to talk to. Your role is
+            to provide a caring, non-judgmental ear to those who are venting.
+          </blockquote>
         </div>
       </div>
       <div className={styles.statsPositioner}>
