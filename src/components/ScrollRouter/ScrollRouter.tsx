@@ -3,10 +3,11 @@ import styles from "./ScrollRouter.module.css";
 import LandingPage from "../LandingPage/LandingPage";
 import DevMessagePage from "../DevMessagePage/DevMessagePage";
 import LegalPage from "../LegalPage/LegalPage";
+import ConnectionPage from "../ConnectionPage/ConnectionPage";
 
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
+  useEffect(() => {
     function updateSize() {
       setSize([window.innerWidth, window.innerHeight]);
     }
@@ -47,15 +48,16 @@ function ScrollRouter() {
   }, [height, width]);
 
   const pages = [
-    <LandingPage onNextPage={handleNextPage} />,
-    <DevMessagePage onNextPage={handleNextPage} />,
-    <LegalPage />,
+    <LandingPage key={0} onNextPage={handleNextPage} />,
+    <DevMessagePage key={1} onNextPage={handleNextPage} />,
+    <LegalPage key={2} onNextPage={handleNextPage} />,
+    <ConnectionPage key={3} />,
   ];
 
   return (
     <div className={styles.container} ref={containerRef}>
       {pages.map((page, index) =>
-        (index === activePage - 1 || index === activePage) ? (
+        index === activePage - 1 || index === activePage ? (
           <div key={index}>{page}</div>
         ) : (
           <div key={index}></div>

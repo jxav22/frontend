@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./LegalPage.module.css";
 import NextPageButton from "../NextPageButton/NextPageButton";
 
-function LegalPage() {
+function LegalPage({onNextPage}: {onNextPage: () => void}) {
   return (
     <div className={styles.container}>
       <div className={styles.leftPane} />
@@ -34,9 +34,7 @@ function LegalPage() {
 
         <NextPageButton
           className={styles.nextPageButton}
-          onClick={() => {
-            alert("nice");
-          }}
+          onClick={onNextPage}
         >
           I agree, proceed to chat
         </NextPageButton>

@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    padding: 3vh;
+    font-size: max(1.5vw, 3vh);
+}
