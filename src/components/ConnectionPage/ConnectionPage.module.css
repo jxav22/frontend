@@ -92,6 +92,13 @@
   }
 }
 
+.venterSelected,
+.listenerSelected {
+  .container {
+    --hover-section-weight: -15%;
+  }
+}
+
 /* LEFT SECTION STYLING */
 
 .ventSection {
