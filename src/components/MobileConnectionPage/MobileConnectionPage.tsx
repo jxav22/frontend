@@ -3,9 +3,15 @@ import styles from "./MobileConnectionPage.module.css";
 import Logo from "../Logo/Logo";
 import Stats from "../Stats/Stats";
 
-function MobileConnectionPage() {
-  const [currentState, setCurrentState] = React.useState<string>("");
-
+function MobileConnectionPage({
+  onSelectListener,
+  onSelectVenter,
+  currentState,
+}: {
+  onSelectListener: () => void;
+  onSelectVenter: () => void;
+  currentState: string;
+}) {
   let stateStyling: string;
   switch (currentState) {
     case "venter":
@@ -19,24 +25,16 @@ function MobileConnectionPage() {
       break;
   }
 
-  const handleSelectVenter = () => {
-    setCurrentState("venter");
-  };
-
-  const handleSelectListener = () => {
-    setCurrentState("listener");
-  };
-
   return (
     <div className={stateStyling}>
       <div className={styles.container}>
-        <div className={styles.ventSection} onClick={handleSelectVenter}>
+        <div className={styles.ventSection} onClick={onSelectVenter}>
           <h1 className={styles.ventHeading}>VENT</h1>
-            <h2 className={styles.ventSubheading}>talk or release</h2>
+          <h2 className={styles.ventSubheading}>talk or release</h2>
         </div>
-        <div className={styles.listenSection} onClick={handleSelectListener}>
+        <div className={styles.listenSection} onClick={onSelectListener}>
           <h1 className={styles.listenHeading}>LISTEN</h1>
-            <h2 className={styles.listenSubheading}>help someone out</h2>
+          <h2 className={styles.listenSubheading}>help someone out</h2>
         </div>
         <Stats ventersOnline={0} listenersOnline={0} />
         <Logo />

@@ -1,26 +1,28 @@
 .container {
     display: grid;
-    grid-template-columns: 50% 50%;
     height: 100vh;
     transition: grid-template-columns 600ms;
 
+    --grid-template-columns: 50% 50%;
+    grid-template-columns: var(--grid-template-columns);
+
     --header-size: 15vh;
     --subHeader-size: 5vh;
-
     --middle-padding: 4vw;
+    /* --hover-text-weight: 1.04; */
+    --transition-duration: 200ms;
 
-    --text-scale-on-hover: 1.04;
-
-    --transition-time: 200ms;
+    --hover-section-weight: 5%;
+    --select-section-weight: 25%;
 }
 
 /** HOVER STYLING **/
 
-.container:has(.leftSection:hover) {
-    grid-template-columns: 55% 45%;
+.container:has(.ventSection:hover) {
+    --grid-template-columns: calc(50% - var(--hover-section-weight)) calc(50% + var(--hover-section-weight));
 
     /* .ventHeader {
-        transform: scale(var(--text-scale-on-hover));
+        transform: scale(var(--hover-text-weight));
     }
 
     .ventSubheader {
@@ -33,11 +35,11 @@
     }
 }
 
-.container:has(.rightSection:hover) {
-    grid-template-columns: 45% 55%;
+.container:has(.listenSection:hover) {
+    --grid-template-columns: calc(50% + var(--hover-section-weight)) calc(50% - var(--hover-section-weight));
 
     /* .listenHeader {
-        transform: scale(var(--text-scale-on-hover));
+        transform: scale(var(--hover-text-weight));
     }
 
     .listenSubheader {
@@ -53,12 +55,9 @@
 /* SELECTION STYLING */
 
 .venterSelected {
+    .container:has(.ventSection:hover),
     .container {
-        grid-template-columns: 75% 25%;
-    }
-
-    .container:has(.leftSection:hover) {
-        grid-template-columns: 75% 25%;
+        --grid-template-columns: calc(50% + var(--select-section-weight)) calc(50% - var(--select-section-weight));
     }
 
     .listenHeader,
@@ -68,12 +67,9 @@
 }
 
 .listenerSelected {
+    .container:has(.listenSection:hover),
     .container {
-        grid-template-columns: 25% 75%;
-    }
-
-    .container:has(.rightSection:hover) {
-        grid-template-columns: 25% 75%;
+        --grid-template-columns: calc(50% - var(--select-section-weight)) calc(50% + var(--select-section-weight));
     }
 
     .ventHeader,
@@ -84,13 +80,15 @@
 
 /* LEFT SECTION STYLING */
 
-.leftSection {
+.ventSection {
     display: grid;
     grid-template-rows: 2fr 1fr 1fr 1fr;
     background-color: #C2CCEF;
 
     padding-right: var(--middle-padding);
-    transition: var(--transition-time);
+    transition: var(--transition-duration);
+
+    overflow: hidden;
 }
 
 .ventHeader {
@@ -102,7 +100,7 @@
 
     font-size: var(--header-size);
 
-    transition: var(--transition-time);
+    transition: var(--transition-duration);
 }
 
 .ventSubheader {
@@ -115,19 +113,19 @@
     font-size: var(--subHeader-size);
     margin: unset;
 
-    transition: var(--transition-time);
+    transition: var(--transition-duration);
 }
 
 /* RIGHT SECTION STYLING */
 
-.rightSection {
+.listenSection {
     display: grid;
     grid-template-rows: 2fr 1fr 1fr 1fr;
     color: #C2CCEF;
 
     padding-left: var(--middle-padding);
 
-    transition: var(--transition-time);
+    transition: var(--transition-duration);
 }
 
 .listenHeader {
@@ -136,7 +134,7 @@
 
     align-self: center;
 
-    transition: var(--transition-time);
+    transition: var(--transition-duration);
 
     margin: unset;
 }
@@ -149,7 +147,7 @@
 
     margin: unset;
 
-    transition: var(--transition-time);
+    transition: var(--transition-duration);
 }
 
 /** FIXED ELEMENTS **/
