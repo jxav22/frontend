@@ -10,7 +10,7 @@
 
   --header-size: 15vh;
   --subHeader-size: 5vh;
-  --middle-padding: 4vw;
+  --middle-padding: 3vw;
   /* --hover-text-weight: 1.04; */
   --transition-duration: 200ms;
 
@@ -74,6 +74,10 @@
     opacity: 1;
     transform: translateX(0);
   }
+
+  .ventSection {
+    cursor: default;
+  }
 }
 
 .listenerSelected {
@@ -91,6 +95,10 @@
   .listenDescription {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  .listenSection {
+    cursor: default;
   }
 }
 
@@ -114,6 +122,8 @@
   overflow: hidden;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+
+  cursor: pointer;
 }
 
 .ventHeader {
@@ -141,6 +151,8 @@
   font-size: var(--subHeader-size);
   margin: unset;
 
+  line-height: 7vh;
+
   transition: var(--transition-duration);
 }
 
@@ -154,6 +166,10 @@
   padding-left: var(--middle-padding);
 
   transition: var(--transition-duration);
+
+  overflow: hidden;
+
+  cursor: pointer;
 }
 
 .listenHeader {
@@ -173,6 +189,8 @@
   width: min-content;
   align-self: end;
   font-size: var(--subHeader-size);
+
+  line-height: 7vh;
 
   margin: unset;
 
@@ -206,7 +224,7 @@
 /* Blockquote styling */
 .ventDescription,
 .listenDescription {
-  width: 25vw;
+  width: 30vw;
   height: max-content;
   font-size: 1.5rem;
   font-style: italic;

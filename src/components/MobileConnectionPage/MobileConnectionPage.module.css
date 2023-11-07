@@ -12,7 +12,7 @@
   --hover-section-weight: 1.1;
   --select-section-weight: 3;
 
-  --subheading-translation-length: 50%;
+  --subheading-translation-length: 10vh;
 
   --transition-duration: 300ms;
 }
@@ -66,24 +66,26 @@
 }
 
 .ventHeading {
-  font-size: 3rem;
+  font-size: 12vw;
   margin: 0;
   padding: 1rem;
 
   padding: unset;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 
 .ventSubheading {
-  font-size: 2rem;
+  font-size: 6vw;
   align-self: end;
-  text-align: right;
-  width: min-content;
+  text-align: center;
+  width: 100%;
   margin: unset;
   opacity: 0;
 
-  transform: translateX(calc(0% - var(--subheading-translation-length)));
+  padding-top: 5vh;
+
+  transform: translateY(calc(0% - var(--subheading-translation-length)));
 
   transition: var(--transition-duration);
 }
@@ -107,24 +109,26 @@
 }
 
 .listenHeading {
-  font-size: 3rem;
+  font-size: 12vw;
   margin: 0;
   padding: 1rem;
 
   padding: unset;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 
 .listenSubheading {
-  font-size: 2rem;
+  font-size: 6vw;
   align-self: start;
-  width: min-content;
+  width: 100%;
+  text-align: center;
   margin: unset;
-  text-align: left;
   opacity: 0;
 
-  transform: translateX(var(--subheading-translation-length));
+  padding-bottom: 5vh;
+
+  transform: translateY(var(--subheading-translation-length));
 
   transition: var(--transition-duration);
 }

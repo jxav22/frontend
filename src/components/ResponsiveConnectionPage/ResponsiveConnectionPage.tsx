@@ -9,7 +9,7 @@ function ResponsiveConnectionPage() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1100);
+      setIsMobile(window.innerWidth <= 1200);
     };
 
     handleResize();
