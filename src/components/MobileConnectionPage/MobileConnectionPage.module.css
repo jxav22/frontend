@@ -17,6 +17,7 @@
   --transition-duration: 300ms;
 }
 
+/* HOVER STYLING */
 .container:has(.ventSection:hover) {
   --vent-section-weight: var(--hover-section-weight);
 }
@@ -24,6 +25,31 @@
 .container:has(.listenSection:hover) {
   --listen-section-weight: var(--hover-section-weight);
 }
+
+/* SELECTION STYLING */
+.venterSelected {
+  .ventSection {
+    --vent-section-weight: var(--select-section-weight);
+  }
+
+  .ventSubheading {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.listenerSelected {
+  .listenSection {
+    --listen-section-weight: var(--select-section-weight);
+  }
+
+  .listenSubheading {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* VENT SECTION STYLING */
 
 .ventSection {
   flex: var(--vent-section-weight);
@@ -58,9 +84,11 @@
   opacity: 0;
 
   transform: translateX(calc(0% - var(--subheading-translation-length)));
-  
+
   transition: var(--transition-duration);
 }
+
+/* LISTEN SECTION STYLING */
 
 .listenSection {
   flex: var(--listen-section-weight);
@@ -99,26 +127,4 @@
   transform: translateX(var(--subheading-translation-length));
 
   transition: var(--transition-duration);
-}
-
-.venterSelected {
-  .ventSection {
-    --vent-section-weight: var(--select-section-weight);
-  }
-
-  .ventSubheading {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.listenerSelected {
-  .listenSection {
-    --listen-section-weight: var(--select-section-weight);
-  }
-
-  .listenSubheading {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }

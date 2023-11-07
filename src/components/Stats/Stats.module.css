@@ -5,3 +5,7 @@
     padding: 3vh;
     font-size: max(1.5vw, 3vh);
 }
+
+.container > span:hover {
+    font-weight: bold;
+}
