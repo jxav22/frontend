@@ -8,6 +8,7 @@ import LegalPage from '@/components/LegalPage/LegalPage'
 import ScrollRouter from '@/components/ScrollRouter/ScrollRouter'
 import ConnectionPage from '@/components/ConnectionPage/ConnectionPage'
 import MobileConnectionPage from '@/components/MobileConnectionPage/MobileConnectionPage'
+import ChatHeader from '@/components/ChatHeader/ChatHeader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,9 +22,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
+        <ChatHeader/>
         {/* <MobileConnectionPage/> */}
         {/* <ConnectionPage/> */}
-        <ScrollRouter/>
+        {/* <ScrollRouter/> */}
         {/* <LandingPage/> */}
         {/* <DevMessagePage/> */}
         {/* <LegalPage/> */}
