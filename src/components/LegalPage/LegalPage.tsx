@@ -2,9 +2,13 @@ import React from "react";
 import styles from "./LegalPage.module.css";
 import NextPageButton from "../NextPageButton/NextPageButton";
 
-function LegalPage({onNextPage}: {onNextPage: () => void}) {
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+
+function LegalPage({ onNextPage }: { onNextPage: () => void }) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${inter.className}`}>
       <div className={styles.leftPane} />
       <span>
         <h2>
@@ -32,10 +36,7 @@ function LegalPage({onNextPage}: {onNextPage: () => void}) {
           </li>
         </ul>
 
-        <NextPageButton
-          className={styles.nextPageButton}
-          onClick={onNextPage}
-        >
+        <NextPageButton className={styles.nextPageButton} onClick={onNextPage}>
           I agree, proceed to chat
         </NextPageButton>
       </span>

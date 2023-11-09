@@ -5,6 +5,7 @@ import DevMessagePage from "../DevMessagePage/DevMessagePage";
 import LegalPage from "../LegalPage/LegalPage";
 import ConnectionPage from "../ConnectionPage/ConnectionPage";
 import ResponsiveConnectionPage from "../ResponsiveConnectionPage/ResponsiveConnectionPage";
+import ChatPage from "../ChatPage/ChatPage";
 
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
@@ -52,7 +53,7 @@ function ScrollRouter() {
     <LandingPage key={0} onNextPage={handleNextPage} />,
     <DevMessagePage key={1} onNextPage={handleNextPage} />,
     <LegalPage key={2} onNextPage={handleNextPage} />,
-    <ResponsiveConnectionPage key={3} />,
+    <ChatPage key={3}/>
   ];
 
   return (

@@ -1,16 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Main.module.css'
-import LandingPage from '@/components/LandingPage/LandingPage'
-import DevMessagePage from '@/components/DevMessagePage/DevMessagePage'
-import LegalPage from '@/components/LegalPage/LegalPage'
-import ScrollRouter from '@/components/ScrollRouter/ScrollRouter'
-import ConnectionPage from '@/components/ConnectionPage/ConnectionPage'
-import MobileConnectionPage from '@/components/MobileConnectionPage/MobileConnectionPage'
-import ChatHeader from '@/components/ChatHeader/ChatHeader'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Main.module.css";
+import LandingPage from "@/components/LandingPage/LandingPage";
+import DevMessagePage from "@/components/DevMessagePage/DevMessagePage";
+import LegalPage from "@/components/LegalPage/LegalPage";
+import ScrollRouter from "@/components/ScrollRouter/ScrollRouter";
+import ConnectionPage from "@/components/ConnectionPage/ConnectionPage";
+import MobileConnectionPage from "@/components/MobileConnectionPage/MobileConnectionPage";
+import ChatHeader from "@/components/ChatHeader/ChatHeader";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -21,11 +21,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <ChatHeader/>
+      <main className={styles.main}>
+        {/* <ChatHeader/> */}
         {/* <MobileConnectionPage/> */}
         {/* <ConnectionPage/> */}
-        {/* <ScrollRouter/> */}
+        <ScrollRouter />
         {/* <LandingPage/> */}
         {/* <DevMessagePage/> */}
         {/* <LegalPage/> */}
@@ -124,5 +124,5 @@ export default function Home() {
         </div> */}
       </main>
     </>
-  )
+  );
 }
