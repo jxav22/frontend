@@ -1,0 +1,11 @@
+.chatButton {
+    all: unset;
+    text-transform: uppercase;
+    font-size: 2.5vh;
+    opacity: 0.1;
+}
+
+.chatButton:hover {
+    opacity: 1;
+    cursor: pointer;
+}

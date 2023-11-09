@@ -24,7 +24,6 @@ function ChatHeader() {
       </div>
       <h2 className={`${styles.stats} ${inter.className}`}>0 Venters Online</h2>
       <h2 className={`${styles.stats} ${inter.className}`}>0 Listeners Online</h2>
-      <UsernameDisplay username={"fat chungus"} isTyping={true}/>
     </div>
   );
 }

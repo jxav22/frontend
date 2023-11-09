@@ -44,7 +44,7 @@
 }
 
 .container > span > p {
-    font-size: 2.2vw;
+    font-size: 4vh;
 }
 
 @keyframes fadeInFromRight {

@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6vh;
+/* 
+    -webkit-mask-image: linear-gradient(to bottom, transparent, 30%, black);
+    mask-image: linear-gradient(to bottom, transparent, 30%, black); */
+
+    height: 25vh;
+    overflow-y: scroll;
+
+    scrollbar-color: black; 
+
+    font-size: 2vh;
+}
+
+.container::-webkit-scrollbar{
+  width: 7px;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.messageContainer {
+  display: flex;
+  gap: 3px;
+
+  padding-bottom: 4.5vh;
+  margin-right: 1vw;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.messageText {
+  flex: 1;
+}
+
+.timestamp {
+  font-weight: bold;
+  opacity: 0;
+}
+
+.messageContainer:hover {
+  .timestamp {
+    opacity: 1;
+  }
+}
+
+.disconnected {
+  font-weight: bold;
+  font-style: italic;
+}
