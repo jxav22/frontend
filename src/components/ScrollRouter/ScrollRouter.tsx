@@ -53,6 +53,7 @@ function ScrollRouter() {
     <LandingPage key={0} onNextPage={handleNextPage} />,
     <DevMessagePage key={1} onNextPage={handleNextPage} />,
     <LegalPage key={2} onNextPage={handleNextPage} />,
+    // <ResponsiveConnectionPage key = {3} />,
     <ChatPage key={3}/>
   ];
 

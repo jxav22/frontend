@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./MobileConnectionPage.module.css";
 import Logo from "../Logo/Logo";
 import Stats from "../Stats/Stats";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 function MobileConnectionPage({
   onSelectListener,
@@ -27,7 +30,7 @@ function MobileConnectionPage({
 
   return (
     <div className={stateStyling}>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${inter.className}`}>
         <div className={styles.ventSection} onClick={onSelectVenter}>
           <h1 className={styles.ventHeading}>VENT</h1>
           <h2 className={styles.ventSubheading}>talk or release</h2>
