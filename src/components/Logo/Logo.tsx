@@ -6,10 +6,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 function Logo() {
   return (
-    <div className={`${styles.container} ${inter.className}`}>
+    <article className={`${styles.container} ${inter.className}`}>
       <h1>Vent</h1>
       <h1 className={styles.colouredPart}>Something.</h1>
-    </div>
+    </article>
   );
 }
 

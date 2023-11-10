@@ -4,10 +4,10 @@ import ChatButton from '../ChatButton/ChatButton'
 
 function ChatReportDCPane() {
   return (
-    <div className={styles.container}>
+    <article className={styles.container}>
         <ChatButton text={"report"} onClick={()=>{console.log('reported')}}/>
         <ChatButton text={"dc"} onClick={()=>{console.log('disconnected')}}/>
-    </div>
+    </article>
   )
 }
 

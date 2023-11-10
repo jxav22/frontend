@@ -22,20 +22,20 @@ function MessageLog({
 }) {
   return (
     <>
-      <div className={`${styles.container} ${inter.className}`}>
+      <article className={`${styles.container} ${inter.className}`}>
         {messages.map((message) => {
           return (
             <div className={styles.messageContainer}>
-              <div className={styles.username}>{`${message.username}:`}</div>
-              <div className={styles.messageText}>{message.message}</div>
-              <div className={styles.timestamp}>{message.timestamp}</div>
+              <span className={styles.username}>{`${message.username}:`}</span>
+              <span className={styles.messageText}>{message.message}</span>
+              <span className={styles.timestamp}>{message.timestamp}</span>
             </div>
           );
         })}
         {isDisconnected && (
-          <div className={styles.disconnected}>You have been disconnected.</div>
+          <span className={styles.disconnected}>You have been disconnected.</span>
         )}
-      </div>
+      </article>
     </>
   );
 }

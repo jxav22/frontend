@@ -7,14 +7,14 @@ const inter = Inter({ subsets: ["latin"], weight: "700" });
 
 function UsernameDisplay({username,  isTyping }: { username: string, isTyping: boolean }) {
   return (
-    <div className={`${styles.container} ${isTyping && styles.isTyping}`}>
-      <div className={`${inter.className}`}>{username}</div>
-      <div className={styles.typingIndicator}>
+    <article className={`${styles.container} ${isTyping && styles.isTyping}`}>
+      <span className={`${inter.className}`}>{username}</span>
+      <span className={styles.typingIndicator}>
         <div>.</div>
         <div>.</div>
         <div>.</div>
-      </div>
-    </div>
+      </span>
+    </article>
   );
 }
 

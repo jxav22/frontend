@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 function LegalPage({ onNextPage }: { onNextPage: () => void }) {
   return (
-    <div className={`${styles.container} ${inter.className}`}>
-      <div className={styles.leftPane} />
+    <section className={`${styles.container} ${inter.className}`}>
+      <aside className={styles.leftPane} />
       <span>
         <h2>
           By clicking “I agree, proceed to chat” you agree to the following:
@@ -40,7 +40,7 @@ function LegalPage({ onNextPage }: { onNextPage: () => void }) {
           I agree, proceed to chat
         </NextPageButton>
       </span>
-    </div>
+    </section>
   );
 }
 

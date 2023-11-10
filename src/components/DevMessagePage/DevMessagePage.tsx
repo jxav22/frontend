@@ -12,8 +12,8 @@ export default function DevMessagePage({
   onNextPage: () => void;
 }) {
   return (
-    <div className={`${styles.container} ${inter.className}`}>
-      <div className={styles.leftPane} />
+    <section className={`${styles.container} ${inter.className}`}>
+      <aside className={styles.leftPane} />
       <Image
         className={styles.profilePicture}
         src="/profile.png"
@@ -38,6 +38,6 @@ export default function DevMessagePage({
         <p>Dev</p>
         <NextPageButton onClick={onNextPage}>{"[continue]"}</NextPageButton>
       </span>
-    </div>
+    </section>
   );
 }

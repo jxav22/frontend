@@ -46,17 +46,17 @@ function ChatPage() {
     new Message("fat chungus flower", "it's different", "3 hours ago"),
   ];
 
-  const isDisconnected = false;
+  const isDisconnected = true;
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <span className={styles.header}>
         <ChatHeader />
       </span>
       <span className={styles.partnerUsername}>
         <UsernameDisplay username="fat chungus flower" isTyping={true} />
       </span>
-      <div className={styles.messageSection}>
+      <section className={styles.messageSection}>
         <MessageLog
           isDisconnected={isDisconnected}
           messages={exampleMessages}
@@ -78,8 +78,8 @@ function ChatPage() {
           <UsernameDisplay username="watermelon man" isTyping={false} />
         </span>
         <ChatInput />
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
 

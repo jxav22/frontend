@@ -10,21 +10,21 @@ const interBold = Inter({ subsets: ["latin"], weight: "700" });
 
 function ChatHeader() {
   return (
-    <div className={styles.container}>
-      <div className={`${styles.header} ${interBold.className}`}>
-        <div className={styles.leftSection}>
-          <div className={styles.navBar}>
+    <section className={styles.container}>
+      <header className={`${styles.header} ${interBold.className}`}>
+        <section className={styles.leftSection}>
+          <nav className={styles.navBar}>
             <p>discord</p>
             <p>patreon</p>
             <p>twitter</p>
-          </div>
+          </nav>
           <h1 className={styles.titleOne}>Vent</h1>
-        </div>
+        </section>
         <h1 className={styles.titleTwo}>Something</h1>
-      </div>
+      </header>
       <h2 className={`${styles.stats} ${inter.className}`}>0 Venters Online</h2>
       <h2 className={`${styles.stats} ${inter.className}`}>0 Listeners Online</h2>
-    </div>
+    </section>
   );
 }
 

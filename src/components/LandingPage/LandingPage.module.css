@@ -67,6 +67,7 @@
 }
 
 .displacedArea {
+  all: unset;
   transition: transform 0.1s ease;
 }
 

@@ -6,11 +6,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 function SocialButtons() {
   return (
-    <div className={`${styles.socialButtons} ${inter.className}`}>
+    <nav className={`${styles.socialButtons} ${inter.className}`}>
         <span>discord</span>
         <span>patreon</span>
         <span>twitter</span>
-    </div>
+    </nav>
   )
 }
 

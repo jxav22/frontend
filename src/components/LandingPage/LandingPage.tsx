@@ -8,15 +8,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 function LandingPage({ onNextPage }: { onNextPage: () => void }) {
   return (
-    <div className={`${styles.container} ${inter.className}`}>
-      <div className={styles.leftPane} />
+    <section className={`${styles.container} ${inter.className}`}>
+      <aside className={styles.leftPane} />
       <SocialButtons />
-      <span className={styles.displacedArea} onClick={onNextPage}>
+      <button className={styles.displacedArea} onClick={onNextPage}>
         <h1 className={styles.leftTitle}>Vent</h1>
         <h1 className={styles.rightTitle}>Something.</h1>
-        <p className={styles.subTitle}>We all need an ear sometimes.</p>
-      </span>
-    </div>
+        <h2 className={styles.subTitle}>We all need an ear sometimes.</h2>
+      </button>
+    </section>
   );
 }
 
