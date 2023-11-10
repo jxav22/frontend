@@ -3,7 +3,7 @@ import styles from "./ScrollRouter.module.css";
 import LandingPage from "../LandingPage/LandingPage";
 import DevMessagePage from "../DevMessagePage/DevMessagePage";
 import LegalPage from "../LegalPage/LegalPage";
-import ConnectionPage from "../ConnectionPage/ConnectionPage";
+import ConnectionPage from "../ResponsiveConnectionPage/ConnectionPage/ConnectionPage";
 import ResponsiveConnectionPage from "../ResponsiveConnectionPage/ResponsiveConnectionPage";
 import ChatPage from "../ChatPage/ChatPage";
 

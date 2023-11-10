@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ChatHeader.module.css";
-import Stats from "../Stats/Stats";
+import Stats from "../../ResponsiveConnectionPage/Stats/Stats";
 
 import { Inter } from "next/font/google";
 import UsernameDisplay from "../UsernameDisplay/UsernameDisplay";

@@ -17,7 +17,7 @@
   --transition-duration: 300ms;
 }
 
-/* HOVER STYLING */
+/* Hover styling */
 .container:has(.ventSection:hover) {
   --vent-section-weight: var(--hover-section-weight);
 }
@@ -26,7 +26,7 @@
   --listen-section-weight: var(--hover-section-weight);
 }
 
-/* SELECTION STYLING */
+/* Selection styling */
 .venterSelected {
   .ventSection {
     --vent-section-weight: var(--select-section-weight);
@@ -49,7 +49,7 @@
   }
 }
 
-/* VENT SECTION STYLING */
+/* Vent section styling */
 
 .ventSection {
   flex: var(--vent-section-weight);
@@ -90,7 +90,7 @@
   transition: var(--transition-duration);
 }
 
-/* LISTEN SECTION STYLING */
+/* Listen section styling */
 
 .listenSection {
   flex: var(--listen-section-weight);
