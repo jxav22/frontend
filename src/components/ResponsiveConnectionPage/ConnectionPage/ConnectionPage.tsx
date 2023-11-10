@@ -33,9 +33,9 @@ function ConnectionPage({
   }
 
   return (
-    <div className={stateStyling}>
-      <div className={`${styles.container} ${inter.className}`}>
-        <div className={styles.ventSection} onClick={onSelectVenter}>
+    <span className={stateStyling}>
+      <section className={`${styles.container} ${inter.className}`}>
+        <section className={styles.ventSection} onClick={onSelectVenter}>
           <h1 className={styles.ventHeader}>VENT</h1>
           <h2 className={styles.ventSubheader}>talk or release</h2>
           <blockquote
@@ -45,9 +45,9 @@ function ConnectionPage({
             emotions, and struggles openly and honestly. This space is here for
             you to unload your feelings without fear of judgment.
           </blockquote>
-        </div>
+        </section>
 
-        <div className={styles.listenSection} onClick={onSelectListener}>
+        <section className={styles.listenSection} onClick={onSelectListener}>
           <h1 className={styles.listenHeader}>LISTEN</h1>
           <h2 className={styles.listenSubheader}>help someone out</h2>
           <blockquote
@@ -57,15 +57,15 @@ function ConnectionPage({
             understanding to those who need someone to talk to. Your role is to
             provide a caring, non-judgmental ear to those who are venting.
           </blockquote>
-        </div>
-      </div>
-      <div className={styles.statsPositioner}>
+        </section>
+      </section>
+      <span className={styles.statsPositioner}>
         <Stats stats={stats} />
-      </div>
-      <div className={styles.logoPositioner}>
+      </span>
+      <span className={styles.logoPositioner}>
         <Logo />
-      </div>
-    </div>
+      </span>
+    </span>
   );
 }
 

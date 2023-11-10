@@ -28,10 +28,10 @@ function Stats({
   const listenerText = `${joinAndPluralize(queueListener, "Listener")} online`;
 
   return (
-    <div className={`${styles.container} ${inter.className}`}>
+    <article className={`${styles.container} ${inter.className}`}>
       <span>{venterText}</span>
       <span>{listenerText}</span>
-    </div>
+    </article>
   );
 }
 

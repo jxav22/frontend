@@ -31,20 +31,20 @@ function MobileConnectionPage({
   }
 
   return (
-    <div className={stateStyling}>
-      <div className={`${styles.container} ${inter.className}`}>
-        <div className={styles.ventSection} onClick={onSelectVenter}>
+    <span className={stateStyling}>
+      <section className={`${styles.container} ${inter.className}`}>
+        <article className={styles.ventSection} onClick={onSelectVenter}>
           <h1 className={styles.ventHeading}>VENT</h1>
           <h2 className={styles.ventSubheading}>talk or release</h2>
-        </div>
-        <div className={styles.listenSection} onClick={onSelectListener}>
+        </article>
+        <article className={styles.listenSection} onClick={onSelectListener}>
           <h1 className={styles.listenHeading}>LISTEN</h1>
           <h2 className={styles.listenSubheading}>help someone out</h2>
-        </div>
+        </article>
         <Stats stats={stats} />
         <Logo />
-      </div>
-    </div>
+      </section>
+    </span>
   );
 }
 

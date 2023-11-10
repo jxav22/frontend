@@ -2,15 +2,17 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    line-height: 0;
     width: min-content;
     height: min-content;
-    padding: 2vh;
-    padding-right: 4vh;
-
+    
     color: black;
 }
 
 .colouredPart {
     color: #C2CCEF;
+}
+
+.container > h1 {
+    font-size: 3.3vh;
+    margin: unset;
 }
