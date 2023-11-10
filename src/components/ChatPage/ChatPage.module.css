@@ -28,16 +28,14 @@
 
 .container > header {
   z-index: 2;
-  position: sticky;
-  top: var(--header-top);
 }
 
 .usernameDisplay {
   z-index: 1;
   padding-left: 3vw;
   padding-right: 3vw;
-  padding-top: 4.5vh;
-  margin-top: -4.5vh;
+  padding-top: 4vh;
+  margin-top: -2vh;
   padding-bottom: 4.5vh;
   margin-bottom: -4.5vh;
   background: linear-gradient(white 70%, transparent);
@@ -45,8 +43,13 @@
 
 .stickyHeader {
   position: sticky;
-  top: 0;
+  top: -22.5vh;
   z-index: 3;
+  transition: 600ms;
+}
+
+.stickyHeader:hover {
+  top: 0;
 }
 
 .messageSection {
