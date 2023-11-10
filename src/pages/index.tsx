@@ -6,9 +6,9 @@ import LandingPage from "@/components/LandingPage/LandingPage";
 import DevMessagePage from "@/components/DevMessagePage/DevMessagePage";
 import LegalPage from "@/components/LegalPage/LegalPage";
 import ScrollRouter from "@/components/ScrollRouter/ScrollRouter";
-import ConnectionPage from "@/components/ConnectionPage/ConnectionPage";
-import MobileConnectionPage from "@/components/MobileConnectionPage/MobileConnectionPage";
-import ChatHeader from "@/components/ChatHeader/ChatHeader";
+import ConnectionPage from "@/components/ResponsiveConnectionPage/ConnectionPage/ConnectionPage";
+import MobileConnectionPage from "@/components/ResponsiveConnectionPage/MobileConnectionPage/MobileConnectionPage";
+import ChatHeader from "@/components/ChatPage/ChatHeader/ChatHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 

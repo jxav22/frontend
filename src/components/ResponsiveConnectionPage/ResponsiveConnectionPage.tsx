@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useWindowSize from "@/hooks/useWindowSize";
-import MobileConnectionPage from "../MobileConnectionPage/MobileConnectionPage";
-import ConnectionPage from "../ConnectionPage/ConnectionPage";
+import MobileConnectionPage from "./MobileConnectionPage/MobileConnectionPage";
+import ConnectionPage from "./ConnectionPage/ConnectionPage";
 
 function ResponsiveConnectionPage() {
   const [isMobile, setIsMobile] = useState(false);
