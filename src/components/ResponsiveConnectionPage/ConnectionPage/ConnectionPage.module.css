@@ -7,7 +7,7 @@
   --left-section-width: 50%;
   --right-section-width: 50%;
   grid-template-columns: var(--left-section-width) var(--right-section-width);
-  transition: grid-template-columns 600ms;
+  transition: grid-template-columns 400ms;
   
   --hover-width: 5%;
   --select-width: 25%;
@@ -198,17 +198,48 @@
 
 .ventDescription,
 .listenDescription {
-  width: 30vw;
-  height: max-content;
-  font-size: 1.5rem;
-  font-style: italic;
-  margin: unset;
-  opacity: 0;
-  padding: 3vh;
   background-color: rgba(176, 224, 230, 0.1);
-
+  margin: unset;
+  height: max-content;
+  font-style: italic;
+  font-size: 3vh;
+  width: 30vw;
+  padding: 3vh;
+  
+  opacity: 0;
   transition: calc(var(--transition-duration) * 2);
 }
+
+.ventDescription {
+  grid-area: 2 / 1 / 4 / 1;
+
+  align-self: end;
+  transform: translateX(5%);
+
+  padding-left: 2vw;
+  margin-left: 2vw;
+  border-left: 0.5vw solid;
+
+  border-top-right-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+}
+
+.listenDescription {
+  grid-area: 2 / 2 / 4 / 2;
+
+  justify-self: end;
+  transform: translateX(-5%);
+  text-align: right;
+
+  padding-right: 2vw;
+  margin-right: 2vw;
+  border-right: 0.5vw solid;
+
+  border-top-left-radius: 1vw;
+  border-bottom-left-radius: 1vw;
+}
+
+/* Quote styling */
 
 .ventDescription::before,
 .listenDescription::before {
@@ -221,30 +252,4 @@
 
 .listenDescription::before {
   color: #c2ccef;
-}
-
-.ventDescription {
-  grid-area: 2 / 1 / 4 / 1;
-  align-self: end;
-  transform: translateX(5%);
-  padding-left: 2vw;
-  margin-left: 2vw;
-  border-left: 0.5vw solid;
-
-  border-top-right-radius: 1vw;
-  border-bottom-right-radius: 1vw;
-}
-
-.listenDescription {
-  grid-area: 2 / 2 / 4 / 2;
-  justify-self: end;
-  transform: translateX(-5%);
-  text-align: right;
-
-  padding-right: 2vw;
-  margin-right: 2vw;
-  border-right: 0.5vw solid;
-
-  border-top-left-radius: 1vw;
-  border-bottom-left-radius: 1vw;
 }

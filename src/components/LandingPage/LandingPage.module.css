@@ -22,7 +22,6 @@
   font-size: var(--title-size);
 
   margin: unset;
-  margin-left: 2vw;
   animation: slideDownFadeIn 1.5s ease both;
 }
 
@@ -42,7 +41,6 @@
 
   color: #c2ccef;
   margin: unset;
-  margin-left: 2vw;
   animation: slideUpFadeIn 1.5s ease 0.3s both;
 }
 
@@ -63,7 +61,6 @@
   font-weight: bold;
   font-size: var(--subtitle-size);
 
-  margin: unset;
   margin: 5vh 0 5vh 0;
   animation: slideUpFadeIn 1.5s ease 1s both;
 }
@@ -73,6 +70,7 @@
 .displacedArea {
   all: unset;
   transition: transform 0.1s ease;
+  margin-left: 2vw;
 }
 
 .displacedArea:hover {
@@ -95,7 +93,6 @@
 
   .leftTitle {
     animation: unset;
-    margin: unset;
 
     margin-left: 10vw;
 
@@ -104,7 +101,6 @@
 
   .rightTitle {
     animation: unset;
-    margin: unset;
 
     margin-left: 10vw;
 

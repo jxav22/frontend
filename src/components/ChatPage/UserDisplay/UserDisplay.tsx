@@ -5,9 +5,9 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], weight: "700" });
 
-function UsernameDisplay({username,  isTyping }: { username: string, isTyping: boolean }) {
+function UserDisplay({className, username, isTyping }: { className?: string, username: string, isTyping: boolean }) {
   return (
-    <article className={`${styles.container} ${isTyping && styles.isTyping}`}>
+    <article className={`${className} ${styles.container} ${isTyping && styles.isTyping}`}>
       <span className={`${inter.className}`}>{username}</span>
       <span className={styles.typingIndicator}>
         <div>.</div>
@@ -18,4 +18,10 @@ function UsernameDisplay({username,  isTyping }: { username: string, isTyping: b
   );
 }
 
-export default UsernameDisplay;
+UserDisplay.defaultProps = {
+  className: "",
+  username: "undefined",
+  isTyping: false,
+}
+
+export default UserDisplay;

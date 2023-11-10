@@ -15,7 +15,7 @@
 
 .typingIndicator > div {
     position: relative;
-    transform: scale(2, 2) translateY(-2px);
+    transform: scale(2, 2) translateY(-0.7vh);
 }
 
 .typingIndicator > div:nth-child(2){

@@ -3,7 +3,7 @@ import styles from "./MessageLog.module.css";
 import { Inter } from "next/font/google";
 import ChatButton from "../ChatButton/ChatButton";
 import ChatReportDCPane from "../ChatReportDCPane/ChatReportDCPane";
-import ChatInput from "../ChatInput/ChatInput";
+import InputBox from "../InputSection/InputBox/InputBox";
 
 const inter = Inter({ subsets: ["latin"], weight: "400" });
 

@@ -1,8 +1,10 @@
 .container {
-  --title-height: 5vh;
+  --title-size: 5vh;
+  --subtitle-size: calc(var(--title-size) / 2.8);
   --title-gap: 1.8vw;
   --padding-bottom: 1vh;
   padding-right: 3vw;
+  background-color: white;
 }
 
 .header {
@@ -34,12 +36,15 @@
 .navBar > p {
   margin: unset;
   height: min-content;
-  font-size: calc(var(--title-height) / 2.8);
+  font-size: var(--subtitle-size);
 }
 
 .navBar > p:hover {
-  text-shadow: 0px 0px 1px black;
   cursor: pointer;
+}
+
+.navBar > p:active {
+  margin-top: 1px;
 }
 
 .titleOne {
@@ -48,7 +53,7 @@
   align-self: end;
   text-align: right;
 
-  font-size: var(--title-height);
+  font-size: var(--title-size);
   padding-right: calc(var(--title-gap) / 2);
 }
 
@@ -59,7 +64,7 @@
   margin: unset;
   align-self: end;
 
-  font-size: var(--title-height);
+  font-size: var(--title-size);
   padding-left: calc(var(--title-gap) / 2);
   padding-bottom: var(--padding-bottom);
 }
@@ -70,5 +75,9 @@
   margin: 1.2vh 0 1.2vh 0;
   text-align: right;
 
-  font-size: calc(var(--title-height) / 2.8);
+  font-size: var(--subtitle-size);
+}
+
+.stats:hover {
+  font-weight: bold;
 }

@@ -9,6 +9,7 @@ import ScrollRouter from "@/components/ScrollRouter/ScrollRouter";
 import ConnectionPage from "@/components/ResponsiveConnectionPage/ConnectionPage/ConnectionPage";
 import MobileConnectionPage from "@/components/ResponsiveConnectionPage/MobileConnectionPage/MobileConnectionPage";
 import ChatHeader from "@/components/ChatPage/ChatHeader/ChatHeader";
+import { Counter } from "@/features/counter/counter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
+        {/* <Counter/> */}
         {/* <ChatHeader/> */}
         {/* <MobileConnectionPage/> */}
         {/* <ConnectionPage/> */}

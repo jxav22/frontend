@@ -3,6 +3,7 @@ import useLocalStorage from '../../hooks/useLocalStorage';
 import { socket } from '@/util/socket';
 import ConnectionPage from '../ResponsiveConnectionPage/ConnectionPage/ConnectionPage';
 import ResponsiveConnectionPage from '../ResponsiveConnectionPage/ResponsiveConnectionPage';
+import ChatPage from '../ChatPage/ChatPage';
 
 function ChatRouter() {
   const [session, setSession] = useLocalStorage("session", {});
@@ -42,7 +43,7 @@ function ChatRouter() {
   },[]);
 
   return (
-    <ResponsiveConnectionPage stats={stats}/>
+    <ChatPage/>
   )
 }
 

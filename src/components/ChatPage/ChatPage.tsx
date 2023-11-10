@@ -1,11 +1,13 @@
 import React from "react";
 import ChatHeader from "./ChatHeader/ChatHeader";
-import UsernameDisplay from "./UserDisplay/UserDisplay";
+import UserDisplay from "./UserDisplay/UserDisplay";
 import styles from "./ChatPage.module.css";
 import MessageLog from "./MessageLog/MessageLog";
 import ChatReportDCPane from "./ChatReportDCPane/ChatReportDCPane";
-import ChatInput from "./ChatInput/ChatInput";
+import InputBox from "./InputSection/InputBox/InputBox";
 import ChatButton from "./ChatButton/ChatButton";
+import InputSection from "./InputSection/InputSection";
+import StickyChatHeader from "./StickyChatHeader/StickyChatHeader";
 
 class Message {
   username: string;
@@ -50,11 +52,13 @@ function ChatPage() {
 
   return (
     <section className={styles.container}>
-      <span className={styles.header}>
+      <span className={styles.stickyHeader}>
         <ChatHeader />
-      </span>
-      <span className={styles.partnerUsername}>
-        <UsernameDisplay username="fat chungus flower" isTyping={true} />
+        <UserDisplay
+          className={styles.usernameDisplay}
+          username="fat chungus flower"
+          isTyping={true}
+        />
       </span>
       <section className={styles.messageSection}>
         <MessageLog
@@ -71,13 +75,8 @@ function ChatPage() {
             />
           </span>
         )}
-        <span className={styles.reportDCPane}>
-          <ChatReportDCPane />
-        </span>
-        <span className={styles.username}>
-          <UsernameDisplay username="watermelon man" isTyping={false} />
-        </span>
-        <ChatInput />
+        <ChatReportDCPane />
+        <InputSection />
       </section>
     </section>
   );
