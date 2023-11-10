@@ -3,6 +3,7 @@ import styles from "./MessageLog.module.css";
 import { Inter } from "next/font/google";
 import ChatButton from "../ChatButton/ChatButton";
 import ChatReportDCPane from "../ChatReportDCPane/ChatReportDCPane";
+import ChatInput from "../ChatInput/ChatInput";
 
 const inter = Inter({ subsets: ["latin"], weight: "400" });
 
@@ -35,15 +36,6 @@ function MessageLog({
           <div className={styles.disconnected}>You have been disconnected.</div>
         )}
       </div>
-      {isDisconnected && (
-        <ChatButton
-          text="return"
-          onClick={() => {
-            console.log("yeah boi");
-          }}
-        />
-      )}
-      <ChatReportDCPane />
     </>
   );
 }
