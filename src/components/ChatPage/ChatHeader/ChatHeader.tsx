@@ -3,7 +3,7 @@ import styles from "./ChatHeader.module.css";
 import Stats from "../../ResponsiveConnectionPage/Stats/Stats";
 
 import { Inter } from "next/font/google";
-import UsernameDisplay from "../UsernameDisplay/UsernameDisplay";
+import UsernameDisplay from "../UserDisplay/UserDisplay";
 
 const inter = Inter({ subsets: ["latin"], weight: "400" });
 const interBold = Inter({ subsets: ["latin"], weight: "700" });

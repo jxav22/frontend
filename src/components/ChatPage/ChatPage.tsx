@@ -1,6 +1,6 @@
 import React from "react";
 import ChatHeader from "./ChatHeader/ChatHeader";
-import UsernameDisplay from "./UsernameDisplay/UsernameDisplay";
+import UsernameDisplay from "./UserDisplay/UserDisplay";
 import styles from "./ChatPage.module.css";
 import MessageLog from "./MessageLog/MessageLog";
 import ChatReportDCPane from "./ChatReportDCPane/ChatReportDCPane";

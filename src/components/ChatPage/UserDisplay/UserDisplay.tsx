@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./UsernameDisplay.module.css";
+import styles from "./UserDisplay.module.css";
 
 import { Inter } from "next/font/google";
 

@@ -12,10 +12,12 @@ function ConnectionPage({
   onSelectListener,
   onSelectVenter,
   currentState,
+  stats,
 }: {
   onSelectListener: () => void;
   onSelectVenter: () => void;
   currentState: string;
+  stats: { queueVenter: number; queueListener: number };
 }) {
   let stateStyling: string;
   switch (currentState) {
@@ -58,7 +60,7 @@ function ConnectionPage({
         </div>
       </div>
       <div className={styles.statsPositioner}>
-        <Stats ventersOnline={0} listenersOnline={0} />
+        <Stats stats={stats} />
       </div>
       <div className={styles.logoPositioner}>
         <Logo />

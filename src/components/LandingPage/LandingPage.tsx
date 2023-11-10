@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./LandingPage.module.css";
-import SocialButtons from "../SocialButtons/SocialButtons";
-import ChangeLog from "../ChangeLog/ChangeLog";
+import SocialButtons from "./SocialButtons/SocialButtons";
+import ChangeLog from "./ChangeLog/ChangeLog";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });

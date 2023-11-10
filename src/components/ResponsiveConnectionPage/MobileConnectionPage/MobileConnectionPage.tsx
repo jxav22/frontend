@@ -10,10 +10,12 @@ function MobileConnectionPage({
   onSelectListener,
   onSelectVenter,
   currentState,
+  stats,
 }: {
   onSelectListener: () => void;
   onSelectVenter: () => void;
   currentState: string;
+  stats: { queueVenter: number; queueListener: number };
 }) {
   let stateStyling: string;
   switch (currentState) {
@@ -39,7 +41,7 @@ function MobileConnectionPage({
           <h1 className={styles.listenHeading}>LISTEN</h1>
           <h2 className={styles.listenSubheading}>help someone out</h2>
         </div>
-        <Stats ventersOnline={0} listenersOnline={0} />
+        <Stats stats={stats} />
         <Logo />
       </div>
     </div>
