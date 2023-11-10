@@ -5,30 +5,31 @@
   flex-direction: column;
 }
 
+/* Scrollbar styling */
+
 .container::-webkit-scrollbar{
   width: 0.7vw;
 }
 
-/* Track */
 .container::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
 .container::-webkit-scrollbar-thumb {
   background: #888;
 }
 
-/* Handle on hover */
 .container::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Layout styling (in order of elements) */
 
 .header {
   z-index: 2;
 }
 
-.partnerUsername{
+.partnerUsername {
   z-index: 1;
   position: sticky;
   top: 0;

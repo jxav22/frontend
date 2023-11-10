@@ -12,6 +12,8 @@
     background-color: #C2CCEF;
 }
 
+/* Image styling */
+
 .profilePicture {
     grid-area: 1 / 1 / 2 / 1;
     justify-self: center;
@@ -38,6 +40,8 @@
 
 }
 
+/* Text styling */
+
 .container > span {
     margin: 5vw;
     animation: fadeInFromRight 0.5s linear 0.5s both;
@@ -57,6 +61,8 @@
         transform: translateX(0);
     }
 }
+
+/* Mobile styling */
 
 @media (max-width: 800px){
     .container {

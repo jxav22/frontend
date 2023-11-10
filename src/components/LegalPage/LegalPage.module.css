@@ -12,6 +12,8 @@
     background-color: #C2CCEF;
 }
 
+/* Text styling */
+
 .container > span {
     margin: 4vw;
     display:flex;
@@ -36,6 +38,8 @@
     padding-bottom: 2vh;
 }
 
+/* Next page button styling */
+
 .nextPageButton {
     animation: fadeIn 1s linear 5s both;
 }
@@ -48,6 +52,8 @@
         opacity: 1;
     }
 }
+
+/* Mobile styling */
 
 @media (max-width: 800px){
     .container {

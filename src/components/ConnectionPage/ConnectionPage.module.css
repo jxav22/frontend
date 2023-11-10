@@ -11,27 +11,18 @@
   --header-size: 15vh;
   --subHeader-size: 5vh;
   --middle-padding: 3vw;
-  /* --hover-text-weight: 1.04; */
   --transition-duration: 200ms;
 
   --hover-section-weight: 5%;
   --select-section-weight: 25%;
 }
 
-/** HOVER STYLING **/
+/* Hover styling */
 
 .container:has(.ventSection:hover) {
   --grid-template-columns: calc(50% + var(--hover-section-weight))
     calc(50% - var(--hover-section-weight));
-
-  /* .ventHeader {
-        transform: scale(var(--hover-text-weight));
-    }
-
-    .ventSubheader {
-        transform: translateX(5%);
-    } */
-
+    
   .ventHeader,
   .ventSubheader {
     opacity: 1;
@@ -42,21 +33,13 @@
   --grid-template-columns: calc(50% - var(--hover-section-weight))
     calc(50% + var(--hover-section-weight));
 
-  /* .listenHeader {
-        transform: scale(var(--hover-text-weight));
-    }
-
-    .listenSubheader {
-        transform: translateX(-5%);
-    } */
-
   .listenHeader,
   .listenSubheader {
     opacity: 1;
   }
 }
 
-/* SELECTION STYLING */
+/* Selection styling */
 
 .venterSelected {
   .container:has(.ventSection:hover),
@@ -109,7 +92,9 @@
   }
 }
 
-/* LEFT SECTION STYLING */
+/* Section styling */
+
+/** Left section styling **/
 
 .ventSection {
   display: grid;
@@ -156,7 +141,7 @@
   transition: var(--transition-duration);
 }
 
-/* RIGHT SECTION STYLING */
+/** Right section styling **/
 
 .listenSection {
   display: grid;
@@ -197,31 +182,22 @@
   transition: var(--transition-duration);
 }
 
-/** FIXED ELEMENTS **/
+/* Fixed element styling */
 
 .statsPositioner {
-  /* grid-row: 4;
-    display: flex;
-    justify-content: start;
-    align-items: end; */
-
   position: fixed;
   bottom: 0;
   left: 0;
 }
 
 .logoPositioner {
-  /* grid-row: 4;
-    display: flex;
-    justify-content: end;
-    align-items: end; */
-
   position: fixed;
   bottom: 0;
   right: 0;
 }
 
 /* Blockquote styling */
+
 .ventDescription,
 .listenDescription {
   width: 30vw;
