@@ -6,7 +6,9 @@ This repo contains all the frontend components.
 This is the design I came up with, for reference:
 [FIGMA DESIGN](https://www.figma.com/file/1rgWVaiH3xtFNrNc32CwAK/VentSomething?type=design&node-id=0%3A1&mode=design&t=Dut0sOhOnggU6nbx-1)
 
-Notably, it's completely resizable and mobile friendly. 
+Notably:
+- it's completely resizable and mobile friendly.
+- I use no frameworks apart from the ones stated above. A lot of the functionality was achieved through CSS, which has been a fun experiment at the least.
 
 # Live deployment
 
