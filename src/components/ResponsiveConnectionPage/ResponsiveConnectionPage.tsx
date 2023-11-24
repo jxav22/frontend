@@ -4,7 +4,11 @@ import MobileConnectionPage from "./MobileConnectionPage/MobileConnectionPage";
 import ConnectionPage from "./ConnectionPage/ConnectionPage";
 import { socket } from "@/util/socket";
 
-function ResponsiveConnectionPage({stats} : {stats: {queueVenter: number, queueListener: number}}) {
+function ResponsiveConnectionPage({
+  stats,
+}: {
+  stats: { queueVenter: number; queueListener: number };
+}) {
   const [isMobile, setIsMobile] = useState(false);
   const [currentState, setCurrentState] = useState<string>("");
 
