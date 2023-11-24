@@ -33,7 +33,7 @@ function InputBox({onTyping}: {onTyping : (isTyping : boolean) => void}) {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, []); 
+  }, [handleKeyDown]); 
 
   return <textarea ref={textAreaRef} onKeyDown={handleKeyDown} className={styles.inputBox} />;
 }
