@@ -23,9 +23,9 @@ function MessageLog({
   return (
     <>
       <article className={`${styles.container} ${inter.className}`}>
-        {messages.map((message) => {
+        {messages.map((message, index) => {
           return (
-            <div className={styles.messageContainer}>
+            <div key={index} className={styles.messageContainer}>
               <span className={styles.username}>{`${message.username}:`}</span>
               <span className={styles.messageText}>{message.message}</span>
               <span className={styles.timestamp}>{message.timestamp}</span>
