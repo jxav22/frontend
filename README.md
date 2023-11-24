@@ -8,6 +8,10 @@ This is the design I came up with, for reference:
 
 Notably, it's completely resizable and mobile friendly. 
 
+# Live deployment
+
+[https://frontend-4d9shhzb2-jxav22.vercel.app/](https://frontend-4d9shhzb2-jxav22.vercel.app/)
+
 # TODO
 
 - Mobile friendly version of the chat page
