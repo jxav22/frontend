@@ -14,33 +14,38 @@
 
 /* Text styling */
 
-.container > span {
-    margin: 4vw;
-    display:flex;
+.container > section {
+    display: flex;
     flex-direction: column;
     justify-content: center;
-
-    line-height: 6vh;
-    font-size: 1.8vw;
+    font-size: 3vh;
 }
 
-.container > span > h2 {
+.container > section > h2 {
     margin: unset;
-    font-weight: bolder;
-    font-size: inherit;
-    text-align: center;
-    padding-bottom: 2vh;
-    width: 80%;
     align-self: center;
+
+    font-size: inherit;
+    font-weight: bolder;
+    text-align: center;
+    width: 80%;
+    padding-bottom: 2vh;
 }
 
-.container > span > ul{
-    padding-bottom: 2vh;
+.container > section > ul {
+    --margin-left-right: 10vw;
+    margin-left: var(--margin-left-right);
+    margin-right: var(--margin-left-right);
+}
+
+.container > section > ul > li{
+    padding-bottom: 3vh;
 }
 
 /* Next page button styling */
 
 .nextPageButton {
+    font-size: inherit;
     animation: fadeIn 1s linear 5s both;
 }
 
@@ -62,15 +67,11 @@
         justify-content: center;
     }
 
-    .profilePicture {
-        margin: unset;
-        margin-bottom: -5vh;
-        width: 30vw;
-        align-self: center;
+    .container > section {
+        font-size: 2vh;
     }
 
-    .container > span {
-        line-height: 5vh;
-        font-size: 3.5vw;
+    .container > section > h2 {
+        width: 55%;
     }
 }

@@ -21,7 +21,7 @@ export default function DevMessagePage({
         height={485}
         alt="drawing of the developer"
       />
-      <span>
+      <section>
         <p>Hey,</p>
         <p>
           I created this site so people could have a safe and supportive
@@ -37,7 +37,7 @@ export default function DevMessagePage({
         <p>Cheers,</p>
         <p>Dev</p>
         <NextPageButton onClick={onNextPage}>{"[continue]"}</NextPageButton>
-      </span>
+      </section>
     </section>
   );
 }

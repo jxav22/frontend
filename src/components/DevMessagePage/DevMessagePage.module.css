@@ -17,13 +17,15 @@
 .profilePicture {
     grid-area: 1 / 1 / 2 / 1;
     justify-self: center;
-    padding-top: 2vh;
 
-    width: 80%;
+    width: 70%;
     height: auto;
 
     animation: fadeIn 0.5s linear 0.5s both;
     transition: transform 0.8s ease-in-out;
+
+    position: relative;
+    top: 8vh;
 }
 
 .profilePicture:hover{
@@ -37,18 +39,32 @@
     100% {
         opacity: 1;
     }
-
 }
 
 /* Text styling */
 
-.container > span {
-    margin: 5vw;
+.container > section {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+
+    justify-content: center;
+
+    --margin-left-right: 13vw;
+    margin-left: var(--margin-left-right);
+    margin-right: var(--margin-left-right);
+
     animation: fadeInFromRight 0.5s linear 0.5s both;
+
+    font-size: 3.5vh;
 }
 
-.container > span > p {
-    font-size: 4vh;
+.container > section > p {
+    margin: unset;
+}
+
+.container > section > *:last-child {
+    font-size: inherit;
 }
 
 @keyframes fadeInFromRight {
@@ -64,21 +80,41 @@
 
 /* Mobile styling */
 
-@media (max-width: 800px){
+@media (max-width: 1000px){
     .container {
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        gap: 5vh;
     }
 
     .profilePicture {
-        margin: unset;
-        margin-bottom: -5vh;
-        width: 30vw;
+        top: unset;
+        width: unset;
         align-self: center;
+        height: 15vh;
+
+        background: rgba(0, 0, 0, 0.03);
+        border-radius: 50px;
     }
 
-    .container > span > p {
-        font-size: 3.5vw;
+    .container > section {
+        height: min-content;
+        justify-content: flex-start;
+        gap: 2vh;
+    }
+
+    .container > section > p {
+        font-size: 2vh;
+    }
+
+    .container > section > p:last-of-type {
+        margin-bottom: 5vh;
+    }
+
+    .container > section > *:last-child {
+        font-size: 2.5vh;
     }
 }

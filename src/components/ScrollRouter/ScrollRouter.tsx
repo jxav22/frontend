@@ -54,7 +54,8 @@ function ScrollRouter() {
     <LandingPage key={0} onNextPage={handleNextPage} />,
     <DevMessagePage key={1} onNextPage={handleNextPage} />,
     <LegalPage key={2} onNextPage={handleNextPage} />,
-    <ChatRouter key={3} />,
+    <ResponsiveConnectionPage key={3} stats={{queueListener: 0, queueVenter: 0}}/>,
+    <ChatRouter key={4} />,
   ];
 
   return (

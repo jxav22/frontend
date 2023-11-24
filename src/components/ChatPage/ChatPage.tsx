@@ -48,7 +48,7 @@ function ChatPage() {
     new Message("fat chungus flower", "it's different", "3 hours ago"),
   ];
 
-  const isDisconnected = true;
+  const isDisconnected = false;
 
   return (
     <section className={styles.container}>

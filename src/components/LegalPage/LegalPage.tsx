@@ -10,11 +10,8 @@ function LegalPage({ onNextPage }: { onNextPage: () => void }) {
   return (
     <section className={`${styles.container} ${inter.className}`}>
       <aside className={styles.leftPane} />
-      <span>
-        <h2>
-          By clicking “I agree, proceed to chat” you agree to the following:
-        </h2>
-
+      <section>
+        <h2>By clicking “I agree, proceed to chat” you agree to the following</h2>
         <ul>
           <li>I am not homicidal or suicidal</li>
           <li>
@@ -35,11 +32,10 @@ function LegalPage({ onNextPage }: { onNextPage: () => void }) {
             a professional therapist if the case permits it
           </li>
         </ul>
-
         <NextPageButton className={styles.nextPageButton} onClick={onNextPage}>
           I agree, proceed to chat
         </NextPageButton>
-      </span>
+      </section>
     </section>
   );
 }
